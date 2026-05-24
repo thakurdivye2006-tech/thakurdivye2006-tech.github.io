@@ -5,309 +5,521 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CRAFTOPIA CREATIONS</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cinzel:wght@500;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
 
 <style>
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
-}
-
-html{
-    scroll-behavior:smooth;
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
 }
 
 body{
-    background:#0d0d0d;
-    color:white;
+font-family:'Poppins',sans-serif;
+background:#0a0a0a;
+color:#fff;
+overflow-x:hidden;
 }
 
+:root{
+--gold:#d4af37;
+--dark:#0a0a0a;
+--card:#171717;
+--light:#f5f5f5;
+}
+
+/* NAVBAR */
+
+nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:rgba(0,0,0,0.92);
+backdrop-filter:blur(10px);
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 8%;
+z-index:1000;
+border-bottom:1px solid rgba(212,175,55,.25);
+}
+
+.logo-text{
+font-family:'Cinzel',serif;
+color:var(--gold);
+font-weight:700;
+letter-spacing:2px;
+font-size:1rem;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:25px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+transition:.3s;
+font-weight:500;
+}
+
+nav ul li a:hover{
+color:var(--gold);
+}
+
+/* HERO */
+
 .hero{
-    min-height:100vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:20px;
-    background:
-    linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
-    linear-gradient(135deg,#111,#1a1a1a,#000);
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:120px 20px 80px;
+background:
+linear-gradient(rgba(0,0,0,.82),rgba(0,0,0,.88)),
+radial-gradient(circle at center,#222,#000);
+}
+
+.hero img{
+width:220px;
+max-width:80%;
+margin-bottom:25px;
+filter:drop-shadow(0 0 15px rgba(212,175,55,.3));
 }
 
 .hero h1{
-    font-size:4rem;
-    color:#FFD700;
-    letter-spacing:4px;
-    margin-bottom:15px;
+font-family:'Cinzel',serif;
+font-size:4rem;
+color:var(--gold);
+letter-spacing:4px;
+margin-bottom:15px;
 }
 
-.hero p{
-    font-size:1.6rem;
-    font-family:'Dancing Script',cursive;
-    color:#f5f5f5;
+.hero .tagline{
+font-family:'Dancing Script',cursive;
+font-size:2rem;
+margin-bottom:10px;
+}
+
+.hero .subtitle{
+font-size:1rem;
+color:#d0d0d0;
+max-width:800px;
+line-height:1.8;
 }
 
 .btn{
-    margin-top:30px;
-    padding:14px 30px;
-    text-decoration:none;
-    background:#FFD700;
-    color:#000;
-    border-radius:30px;
-    font-weight:bold;
-    transition:0.3s;
+display:inline-block;
+margin-top:35px;
+padding:14px 32px;
+background:var(--gold);
+color:#000;
+font-weight:700;
+text-decoration:none;
+border-radius:40px;
+transition:.3s;
 }
 
 .btn:hover{
-    transform:scale(1.05);
+transform:translateY(-3px);
 }
 
+/* GENERAL */
+
 section{
-    padding:80px 10%;
+padding:90px 8%;
 }
 
 .section-title{
-    text-align:center;
-    color:#FFD700;
-    margin-bottom:40px;
-    font-size:2.5rem;
+font-family:'Cinzel',serif;
+text-align:center;
+font-size:2.5rem;
+color:var(--gold);
+margin-bottom:50px;
 }
+
+/* ABOUT */
 
 .about{
-    background:#141414;
+background:#121212;
 }
 
-.about p{
-    max-width:1000px;
-    margin:auto;
-    text-align:center;
-    line-height:1.9;
-    font-size:1.1rem;
+.about-content{
+max-width:1000px;
+margin:auto;
+text-align:center;
+line-height:1.9;
+font-size:1.05rem;
 }
 
-.team{
-    margin-top:30px;
-    text-align:center;
-    font-weight:600;
-    color:#FFD700;
+/* TEAM */
+
+.team-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+margin-top:40px;
 }
+
+.team-card{
+background:var(--card);
+padding:30px;
+border-radius:18px;
+text-align:center;
+border:1px solid rgba(212,175,55,.15);
+transition:.3s;
+}
+
+.team-card:hover{
+transform:translateY(-8px);
+border-color:var(--gold);
+}
+
+.team-card h3{
+color:var(--gold);
+margin-bottom:10px;
+}
+
+/* SERVICES */
 
 .services-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
 }
 
-.card{
-    background:#1b1b1b;
-    padding:30px;
-    border-radius:15px;
-    text-align:center;
-    transition:0.4s;
-    border:1px solid #2d2d2d;
+.service{
+background:var(--card);
+padding:30px;
+border-radius:18px;
+text-align:center;
+transition:.3s;
+border:1px solid rgba(212,175,55,.15);
 }
 
-.card:hover{
-    transform:translateY(-10px);
-    border-color:#FFD700;
+.service:hover{
+transform:translateY(-8px);
+border-color:var(--gold);
 }
 
-.card h3{
-    color:#FFD700;
-    margin-bottom:15px;
+.service h3{
+color:var(--gold);
+margin-bottom:12px;
 }
+
+/* STATS */
+
+.stats{
+background:#111;
+}
+
+.stats-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+text-align:center;
+}
+
+.stat{
+padding:25px;
+background:var(--card);
+border-radius:15px;
+}
+
+.stat h2{
+color:var(--gold);
+font-size:2rem;
+}
+
+/* GALLERY */
 
 .gallery{
-    background:#141414;
+background:#121212;
 }
 
 .gallery-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:25px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
 }
 
-.gallery-item{
-    background:#1b1b1b;
-    height:220px;
-    border-radius:15px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:20px;
-    border:1px solid #2d2d2d;
-    transition:0.4s;
+.gallery-box{
+height:220px;
+background:var(--card);
+display:flex;
+justify-content:center;
+align-items:center;
+border-radius:18px;
+border:1px dashed rgba(212,175,55,.3);
+font-weight:600;
+text-align:center;
+padding:20px;
 }
 
-.gallery-item:hover{
-    border-color:#FFD700;
-    transform:scale(1.03);
-}
-
-.contact{
-    text-align:center;
-}
+/* CONTACT */
 
 .contact-box{
-    background:#1b1b1b;
-    max-width:700px;
-    margin:auto;
-    padding:40px;
-    border-radius:20px;
+max-width:850px;
+margin:auto;
+background:var(--card);
+padding:40px;
+border-radius:20px;
+text-align:center;
 }
 
-.contact p{
-    margin:15px 0;
-    font-size:1.1rem;
+.contact-box p{
+margin:15px 0;
+font-size:1.1rem;
 }
+
+.gold{
+color:var(--gold);
+font-weight:600;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+text-decoration:none;
+padding:14px 18px;
+border-radius:50px;
+font-weight:700;
+z-index:999;
+}
+
+/* FOOTER */
 
 footer{
-    text-align:center;
-    padding:25px;
-    background:#000;
-    color:#999;
-}
-
-.highlight{
-    color:#FFD700;
+background:#000;
+padding:25px;
+text-align:center;
+color:#aaa;
 }
 
 @media(max-width:768px){
 
 .hero h1{
-    font-size:2.5rem;
+font-size:2.3rem;
 }
 
-.hero p{
-    font-size:1.2rem;
+.hero .tagline{
+font-size:1.4rem;
 }
 
-.section-title{
-    font-size:2rem;
+nav{
+flex-direction:column;
+gap:12px;
+}
+
+nav ul{
+flex-wrap:wrap;
+justify-content:center;
 }
 
 }
 </style>
 </head>
-
 <body>
 
+<nav>
+<div class="logo-text">CRAFTOPIA CREATIONS</div>
+
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#team">Team</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
 <section class="hero">
-    <h1>CRAFTOPIA CREATIONS</h1>
-    <p>Crafting Creativity, Inspiring Expression</p>
-    <a href="#about" class="btn">Explore Our Journey</a>
+
+<img src="logo.png" alt="Craftopia Logo">
+
+<h1>CRAFTOPIA CREATIONS</h1>
+
+<p class="tagline">
+Beyond Imagination. Beyond Craft.
+</p>
+
+<p class="subtitle">
+Crafting Creativity, Inspiring Expression
+</p>
+
+<a href="#about" class="btn">Explore Our Work</a>
+
 </section>
 
 <section id="about" class="about">
-    <h2 class="section-title">About Us</h2>
 
-    <p>
-        CRAFTOPIA CREATIONS is a creative platform dedicated to transforming ideas into artistic experiences.
-        We specialize in unique handmade crafts, customized gifts, artistic creations, paintings,
-        and innovative design solutions that bring imagination to life.
-        Our goal is to create meaningful and memorable products that inspire creativity and leave a lasting impression.
-    </p>
+<h2 class="section-title">About Us</h2>
 
-    <div class="team">
-        Team Members<br><br>
-        Divye Thakur • Ambuja Singh • Aditi Singh
-    </div>
+<div class="about-content">
+CRAFTOPIA CREATIONS is a creative venture dedicated to transforming ideas into meaningful artistic experiences. From customized gifts and corporate gifting solutions to paintings, crafts, and creative design projects, we combine imagination, craftsmanship, and innovation to deliver memorable creations that leave a lasting impact.
+</div>
+
 </section>
 
-<section>
-    <h2 class="section-title">Our Services</h2>
+<section id="team">
 
-    <div class="services-grid">
+<h2 class="section-title">Meet Our Team</h2>
 
-        <div class="card">
-            <h3>Customized Gifts</h3>
-            <p>Personalized gifts designed for special occasions and memorable moments.</p>
-        </div>
+<div class="team-grid">
 
-        <div class="card">
-            <h3>Corporate Gifting</h3>
-            <p>Professional gifting solutions for organizations, events, and businesses.</p>
-        </div>
+<div class="team-card">
+<h3>Divye Thakur</h3>
+<p>Corporate Gifting & Business Development</p>
+</div>
 
-        <div class="card">
-            <h3>Paintings & Artwork</h3>
-            <p>Creative artistic pieces crafted with passion and attention to detail.</p>
-        </div>
+<div class="team-card">
+<h3>Ambuja Singh</h3>
+<p>Art & Creative Development</p>
+</div>
 
-        <div class="card">
-            <h3>Handmade Crafts</h3>
-            <p>Unique handcrafted creations designed to stand out.</p>
-        </div>
+<div class="team-card">
+<h3>Aditi Singh</h3>
+<p>Craft Design & Creative Solutions</p>
+</div>
 
-        <div class="card">
-            <h3>Personalized Products</h3>
-            <p>Creative products tailored according to your ideas and preferences.</p>
-        </div>
+</div>
 
-        <div class="card">
-            <h3>Custom Creative Projects</h3>
-            <p>Bringing innovative concepts to life through design and craftsmanship.</p>
-        </div>
-
-    </div>
 </section>
 
-<section class="gallery">
-    <h2 class="section-title">Our Gallery</h2>
+<section id="services">
 
-    <div class="gallery-grid">
+<h2 class="section-title">Our Services</h2>
 
-        <div class="gallery-item">
-            🎁 Customized Gifts Showcase
-        </div>
+<div class="services-grid">
 
-        <div class="gallery-item">
-            🎨 Paintings & Creative Artwork
-        </div>
+<div class="service">
+<h3>Customized Gifts</h3>
+<p>Unique personalized gifting solutions.</p>
+</div>
 
-        <div class="gallery-item">
-            ✨ Handmade Craft Collections
-        </div>
+<div class="service">
+<h3>Corporate Gifting</h3>
+<p>Professional gifting for businesses and events.</p>
+</div>
 
-        <div class="gallery-item">
-            🏢 Corporate Gifting Projects
-        </div>
+<div class="service">
+<h3>Paintings & Artwork</h3>
+<p>Creative artistic works crafted with passion.</p>
+</div>
 
-        <div class="gallery-item">
-            🌟 Personalized Creative Products
-        </div>
+<div class="service">
+<h3>Handmade Crafts</h3>
+<p>Beautiful handcrafted products and designs.</p>
+</div>
 
-        <div class="gallery-item">
-            🚀 Future Projects & Innovations
-        </div>
+<div class="service">
+<h3>Personalized Products</h3>
+<p>Custom-made products designed for you.</p>
+</div>
 
-    </div>
+<div class="service">
+<h3>Event & Festive Gifting</h3>
+<p>Creative gifting for celebrations and occasions.</p>
+</div>
+
+<div class="service">
+<h3>Bulk Orders</h3>
+<p>Large-scale gifting and creative product solutions.</p>
+</div>
+
+<div class="service">
+<h3>Creative Design Solutions</h3>
+<p>Turning imagination into reality.</p>
+</div>
+
+</div>
+
 </section>
 
-<section class="contact">
-    <h2 class="section-title">Contact Us</h2>
+<section class="stats">
 
-    <div class="contact-box">
+<h2 class="section-title">Why Choose Us</h2>
 
-        <p>📧 <span class="highlight">craftopia0508@gmail.com</span></p>
+<div class="stats-grid">
 
-        <p>📷 <span class="highlight">CRAFTOPIA CREATIONS</span></p>
+<div class="stat">
+<h2>Creative</h2>
+<p>Unique Ideas</p>
+</div>
 
-        <p>📱 <span class="highlight">8510979159</span></p>
+<div class="stat">
+<h2>Custom</h2>
+<p>Made For You</p>
+</div>
 
-        <p>📱 <span class="highlight">9026320200</span></p>
+<div class="stat">
+<h2>Quality</h2>
+<p>Attention To Detail</p>
+</div>
 
-        <p>We would love to collaborate on your next creative project.</p>
+<div class="stat">
+<h2>Passion</h2>
+<p>Driven By Creativity</p>
+</div>
 
-    </div>
+</div>
+
 </section>
+
+<section id="gallery" class="gallery">
+
+<h2 class="section-title">Gallery</h2>
+
+<div class="gallery-grid">
+
+<div class="gallery-box">🎁 Customized Gifts</div>
+<div class="gallery-box">🎨 Paintings & Artwork</div>
+<div class="gallery-box">✨ Handmade Crafts</div>
+<div class="gallery-box">🏢 Corporate Gifting</div>
+<div class="gallery-box">🎀 Personalized Products</div>
+<div class="gallery-box">🚀 Future Creations</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2 class="section-title">Contact Us</h2>
+
+<div class="contact-box">
+
+<p>📧 <span class="gold">craftopia0508@gmail.com</span></p>
+
+<p>📱 <span class="gold">8510979159</span></p>
+
+<p>📱 <span class="gold">9026320200</span></p>
+
+<p>📷 <span class="gold">CRAFTOPIA CREATIONS</span></p>
+
+<p>We would love to collaborate on your next creative project.</p>
+
+</div>
+
+</section>
+
+<a class="whatsapp" href="https://wa.me/918510979159" target="_blank">
+WhatsApp Us
+</a>
 
 <footer>
-    © 2026 CRAFTOPIA CREATIONS | Crafting Creativity, Inspiring Expression
+© 2026 CRAFTOPIA CREATIONS • Beyond Imagination. Beyond Craft.
 </footer>
 
 </body>
