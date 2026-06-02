@@ -798,7 +798,7 @@ footer {
     <li><a href="#about">About</a></li>
     <li><a href="#services">Services</a></li>
     <li><a href="#portfolio">Portfolio</a></li>
-    <li><a href="#team">Team</a></li>
+    <li><a href="#team-page">Team</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
   <a href="#contact" class="nav-cta">Get in Touch</a>
@@ -884,12 +884,12 @@ footer {
       </p>
       <div class="about-stats reveal">
         <div class="about-stat">
-          <div class="about-stat-num">50+</div>
-          <div class="about-stat-label">Happy Clients</div>
+          <div class="about-stat-num">🌱</div>
+<div class="about-stat-label">Just Getting Started</div>
         </div>
         <div class="about-stat">
-          <div class="about-stat-num">200+</div>
-          <div class="about-stat-label">Products Crafted</div>
+          <div class="about-stat-num">✨</div>
+<div class="about-stat-label">Every Piece Unique</div>
         </div>
         <div class="about-stat">
           <div class="about-stat-num">9+</div>
@@ -1047,14 +1047,14 @@ footer {
       </div>
     </div>
  
-    <div class="portfolio-item reveal" data-category="crafts" data-title="Animal Figurines Collection" data-sub="Handmade Craft">
-      <img src="Craft_png 1.jpeg" alt="Animal Figurines Collection">
+    <div class="portfolio-item reveal" data-category="crafts" data-title="Handmade Table Calendar" data-sub="Handmade Craft">
+      <img src="Craft_png 1.jpeg" alt="Handmade Table Calendar">
       <div class="portfolio-item-overlay">
         <div><div class="portfolio-item-label">Handmade Figurine</div><div class="portfolio-item-sub">Decorative Craft</div></div>
       </div>
     </div>
  
-    <div class="portfolio-item reveal" data-category="crafts" data-title="Desk Calendar with Feather Pen" data-sub="Functional Craft">
+    <div class="portfolio-item reveal" data-category="crafts" data-title="Desk Calendar with Feather Pen" data-sub="Handmade Craft">
       <img src="Craft_png.jpeg" alt="Desk Calendar with Feather Pen">
       <div class="portfolio-item-overlay">
         <div><div class="portfolio-item-label">Desk Organizer</div><div class="portfolio-item-sub">Functional Craft</div></div>
@@ -1072,8 +1072,8 @@ footer {
         <div><div class="portfolio-item-label">Custom Gift Box</div><div class="portfolio-item-sub">Personalized Gift</div></div>
       </div>
     </div>
- <div class="portfolio-item reveal" data-category="gifts" data-title="Handmade Table Calendar" data-sub="Personalized Gift">
-      <img src="Craft_png 2.jpeg" alt="Handmade Table Calendar">
+ <div class="portfolio-item reveal" data-category="gifts" data-title="Animal Figurines Collection" data-sub="Handmade Craft">
+      <img src="Craft_png 2.jpeg" alt="Animal Figurines Collection">
       <div class="portfolio-item-overlay">
         <div><div class="portfolio-item-label">Table Calendar</div><div class="portfolio-item-sub">Personalized Calendar</div></div>
       </div>
@@ -1110,8 +1110,8 @@ footer {
     </div>
  
     <!-- SKETCHES SLOTS -->
-    <div class="portfolio-item reveal" data-category="sketches" data-title="Dancing Lady Silhouette" data-sub="Ink Art">
-      <img src="Sketch_png.jpeg" alt="Dancing Lady Silhouette">
+    <div class="portfolio-item reveal" data-category="sketches" data-title="Dancing Lady — Ink Silhouette" data-sub="Ink Sketch">
+      <img src="Sketch_png.jpeg" alt="Dancing Lady Ink Silhouette">
       <div class="portfolio-item-overlay">
         <div><div class="portfolio-item-label">Portrait Sketch</div><div class="portfolio-item-sub">Pencil Art</div></div>
       </div>
@@ -1133,55 +1133,77 @@ footer {
  
 <!-- ==================== TEAM ==================== -->
 <section id="team">
-  <div style="text-align:center;max-width:600px;margin:0 auto;">
-    <p class="section-label reveal">The Makers</p>
-    <h2 class="section-title reveal">Meet the <span style="background:linear-gradient(135deg,var(--amber),var(--coral));-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Team</span></h2>
-    <p class="section-desc reveal" style="margin:0 auto 60px;">Three passionate creatives, one shared vision — to craft beauty that inspires.</p>
+  <!-- ==================== TEAM PAGE (SEPARATE) ==================== -->
+<div id="team-page" style="display:none; position:fixed; inset:0; z-index:2000; background:rgba(10,4,20,0.97); backdrop-filter:blur(16px); overflow-y:auto;">
+  <div style="max-width:1100px; margin:0 auto; padding:80px 5%;">
+    <button onclick="closeTeam()" style="position:fixed; top:28px; right:28px; background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.2); color:#fff; width:48px; height:48px; border-radius:50%; font-size:1.3rem; cursor:pointer; transition:all 0.3s; z-index:2001;">✕</button>
+    <div style="text-align:center; margin-bottom:60px;">
+      <p style="display:inline-flex;align-items:center;gap:10px;font-size:0.75rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--amber);margin-bottom:16px;">
+        <span style="width:30px;height:2px;background:linear-gradient(90deg,var(--amber),var(--coral));border-radius:99px;display:inline-block;"></span>
+        The Makers
+      </p>
+      <h2 style="font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:700;color:#fff;line-height:1.15;margin-bottom:20px;">
+        Meet the <span style="background:linear-gradient(135deg,var(--amber),var(--coral));-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Team</span>
+      </h2>
+      <p style="font-size:1rem;color:rgba(255,255,255,0.5);max-width:500px;margin:0 auto;">Three passionate creatives, one shared vision — to craft beauty that inspires.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:30px;">
+
+      <div class="team-card">
+        <div class="team-card-glow" style="background:var(--violet);"></div>
+        <div class="team-avatar" style="background:linear-gradient(135deg,var(--violet),var(--pink));">D</div>
+        <div class="team-name">Divye Thakur</div>
+        <p style="font-size:0.85rem;color:rgba(255,255,255,0.5);line-height:1.7;margin-top:10px;position:relative;z-index:1;">Driving growth through meaningful client relationships and innovative business strategies.</p>
+        <div class="team-role-tags">
+          <span class="team-role-tag">Corporate Gifting</span>
+          <span class="team-role-tag">Business Dev</span>
+          <span class="team-role-tag">Client Relations</span>
+        </div>
+      </div>
+
+      <div class="team-card">
+        <div class="team-card-glow" style="background:var(--coral);"></div>
+        <div class="team-avatar" style="background:linear-gradient(135deg,var(--coral),var(--amber));">A</div>
+        <div class="team-name">Ambuja Singh</div>
+        <p style="font-size:0.85rem;color:rgba(255,255,255,0.5);line-height:1.7;margin-top:10px;position:relative;z-index:1;">The artistic soul behind every painting and creative vision, breathing life into every canvas.</p>
+        <div class="team-role-tags">
+          <span class="team-role-tag">Art & Paintings</span>
+          <span class="team-role-tag">Creative Dev</span>
+          <span class="team-role-tag">Design Lead</span>
+        </div>
+      </div>
+
+      <div class="team-card">
+        <div class="team-card-glow" style="background:var(--cyan);"></div>
+        <div class="team-avatar" style="background:linear-gradient(135deg,var(--cyan),var(--indigo));">A</div>
+        <div class="team-name">Aditi Singh</div>
+        <p style="font-size:0.85rem;color:rgba(255,255,255,0.5);line-height:1.7;margin-top:10px;position:relative;z-index:1;">Amplifying our story online — connecting our craft with the world, one post at a time.</p>
+        <div class="team-role-tags">
+          <span class="team-role-tag">Social Media</span>
+          <span class="team-role-tag">Digital Presence</span>
+          <span class="team-role-tag">Engagement</span>
+        </div>
+      </div>
+
+    </div>
   </div>
-  <div class="team-grid">
- 
-    <div class="team-card reveal">
-      <div class="team-card-glow" style="background:var(--violet);"></div>
-      <div class="team-avatar" style="background:linear-gradient(135deg,var(--violet),var(--pink));">D</div>
-      <div class="team-name">Divye Thakur</div>
-      <p style="font-size:0.85rem;color:rgba(255,255,255,0.5);line-height:1.7;margin-top:10px;position:relative;z-index:1;">
-        Driving growth through meaningful client relationships and innovative business strategies.
-      </p>
-      <div class="team-role-tags">
-        <span class="team-role-tag">Corporate Gifting</span>
-        <span class="team-role-tag">Business Dev</span>
-        <span class="team-role-tag">Client Relations</span>
-      </div>
-    </div>
- 
-    <div class="team-card reveal">
-      <div class="team-card-glow" style="background:var(--coral);"></div>
-      <div class="team-avatar" style="background:linear-gradient(135deg,var(--coral),var(--amber));">A</div>
-      <div class="team-name">Ambuja Singh</div>
-      <p style="font-size:0.85rem;color:rgba(255,255,255,0.5);line-height:1.7;margin-top:10px;position:relative;z-index:1;">
-        The artistic soul behind every painting and creative vision, breathing life into every canvas.
-      </p>
-      <div class="team-role-tags">
-        <span class="team-role-tag">Art & Paintings</span>
-        <span class="team-role-tag">Creative Dev</span>
-        <span class="team-role-tag">Design Lead</span>
-      </div>
-    </div>
- 
-    <div class="team-card reveal">
-      <div class="team-card-glow" style="background:var(--cyan);"></div>
-      <div class="team-avatar" style="background:linear-gradient(135deg,var(--cyan),var(--indigo));">A</div>
-      <div class="team-name">Aditi Singh</div>
-      <p style="font-size:0.85rem;color:rgba(255,255,255,0.5);line-height:1.7;margin-top:10px;position:relative;z-index:1;">
-        Amplifying our story online — connecting our craft with the world, one post at a time.
-      </p>
-      <div class="team-role-tags">
-        <span class="team-role-tag">Social Media</span>
-        <span class="team-role-tag">Digital Presence</span>
-        <span class="team-role-tag">Engagement</span>
-      </div>
-    </div>
- 
+</div>
+
+<!-- Team trigger button (visible on page) -->
+<section id="team" style="background:linear-gradient(135deg,#1A1025,#2D1B4E);padding:80px 5%;text-align:center;position:relative;overflow:hidden;">
+  <div style="position:absolute;inset:0;background:url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.02\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+  <div style="position:relative;z-index:1;">
+    <p style="display:inline-flex;align-items:center;gap:10px;font-size:0.75rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--amber);margin-bottom:16px;">
+      <span style="width:30px;height:2px;background:linear-gradient(90deg,var(--amber),var(--coral));border-radius:99px;display:inline-block;"></span>
+      The Makers
+    </p>
+    <h2 style="font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:700;color:#fff;margin-bottom:16px;">
+      Meet the <span style="background:linear-gradient(135deg,var(--amber),var(--coral));-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Creative Team</span>
+    </h2>
+    <p style="font-size:1rem;color:rgba(255,255,255,0.5);max-width:500px;margin:0 auto 40px;">Three passionate creatives behind every product — art, business, and digital presence.</p>
+    <button onclick="openTeam()" style="padding:16px 40px;border-radius:99px;background:linear-gradient(135deg,var(--violet),var(--pink));color:#fff;font-weight:700;font-size:1rem;border:none;cursor:pointer;box-shadow:0 8px 32px rgba(155,93,229,0.4);transition:all 0.3s;font-family:'DM Sans',sans-serif;">
+      Meet Our Team ✦
+    </button>
   </div>
 </section>
  
@@ -1421,6 +1443,15 @@ function submitForm() {
 const style = document.createElement('style');
 style.textContent = `@keyframes fadeIn { from { opacity:0; transform:scale(0.96); } to { opacity:1; transform:scale(1); } }`;
 document.head.appendChild(style);
+ // ---- Team overlay ----
+function openTeam() {
+  document.getElementById('team-page').style.display = 'block';
+  document.body.style.overflow = 'hidden';
+}
+function closeTeam() {
+  document.getElementById('team-page').style.display = 'none';
+  document.body.style.overflow = '';
+}
 </script>
 </body>
 </html>
